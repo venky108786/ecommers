@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Successful</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<center>
+    <div class="product-card">
+        <h1>Thank You!</h1>
+        <p>Your order has been placed successfully.</p>
+        <a href="{% url 'product_list' %}" class="perfect-btn">Continue Shopping</a>
+    </div>
+</center>
+</body>
+</html>

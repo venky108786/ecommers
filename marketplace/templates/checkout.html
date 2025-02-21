@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<center>
+    <h1>Checkout</h1>
+    <ul class="product-container">
+        {% for item in cart_items %}
+            <li class="product-card">{{ item.product.name }} - ${{ item.product.price }} x {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Total Price: ${{ total_price }}</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="perfect-btn">Confirm Order</button>
+    </form>
+</center>
+</body>
+</html>

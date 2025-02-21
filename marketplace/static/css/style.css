@@ -1,0 +1,84 @@
+.form-container {
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.form-container-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.perfect-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top:15px;
+    border:none;
+}
+
+.perfect-btn:hover {
+    background-color: darkblue;
+}
+
+
+.register-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  /* Space between logo & text */
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 10px;
+    padding: 12px;
+    justify-content: center;
+    list-style-type: none;
+}
+
+/* Individual product box */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1); /* Smooth shadow effect */
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.a-tag {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Default text color */
+    font-weight: bold; /* Makes text bold */
+}
+
+.a-tag:hover {
+    color: blue; /* Change color on hover */
+}
+
+.product-detail-card{
+height:250px;
+width:150px;
+}

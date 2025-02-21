@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="perfect-btn">Logout</button>
+    </form>
+<center>
+    <h1>Product List</h1>
+    <ul class="product-container">
+        {% for product in products %}
+            <li class="product-card">
+                <a href="{% url 'product_details' product.id %}" class="a-tag">
+                    {{ product.name }} - ${{ product.price }}
+                </a>            </li>
+        {% empty %}
+            <li>No products available.</li>
+        {% endfor %}
+    </ul>
+</center>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ vendor.store_name }}</title>
+</head>
+<body>
+    <h1>{{ vendor.store_name }}</h1>
+    <p>Contact: {{ vendor.contact_info }}</p>
+    <h2>Products</h2>
+    <ul>
+        {% for product in products %}
+            <li>
+                <a href="{% url 'product_details' product.id %}">{{ product.name }}</a> - ${{ product.price }}
+            </li>
+        {% empty %}
+            <li>No products available.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'vendor_list' %}">Back to Vendor List</a>
+</body>
+</html>
